@@ -13,6 +13,7 @@ using TestAPI.QueryFilters;
 using Microsoft.OpenApi.Models;
 using System.IO;
 using TestAPI.HostedServices;
+using TestAPI.Constants;
 
 namespace TestAPI
 {
@@ -49,9 +50,11 @@ namespace TestAPI
 
             services.AddSingleton(DatabaseConfiguration);
 
-            //Serviços relacionados ao gerenciamento de Custom Query Filters
-            services.AddSingleton<ICustomFilterOptions, InternalCustomFilterOptions>();
-            services.AddScoped<ICustomFilterProvider, CustomFilterProvider>();
+            services.AddCustomFilters(options =>
+            {
+                options.RegisterFilter(CustomFilters.UserId, false);
+                options.RegisterFilter(CustomFilters.ZipCode, false);
+            });
 
             if (DatabaseConfiguration.DatabaseType == DatabaseType.SqlServer)
             {

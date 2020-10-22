@@ -9,5 +9,7 @@ namespace TestAPI.Constants
     {
         public const string Gmail = "Gmail";
         public const string PhonePOA = "PhonePOA";
+        public const string UserId = "UserId";
+        public const string ZipCode = "ZipCode";
     }
 }
