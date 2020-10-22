@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TestAPI</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilderExtensions">
+            <summary>
+            Extensão para combinação de query filters
+            </summary>
+            <seealso cref="!:https://github.com/dotnet/efcore/issues/10275"/>
+        </member>
+    </members>
+</doc>

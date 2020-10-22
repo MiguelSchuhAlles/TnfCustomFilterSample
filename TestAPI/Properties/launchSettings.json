@@ -1,0 +1,23 @@
+﻿{
+  "profiles": {
+    "Kestrel Development": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "Serilog:MinimumLevel": "Debug"
+      },
+      "applicationUrl": "http://localhost:5000/"
+    },
+    "Kestrel Production": {
+      "commandName": "Project",
+      "launchUrl": "swagger",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Production"
+      },
+      "applicationUrl": "http://localhost:5000/"
+    }
+  }
+}
